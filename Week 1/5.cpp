@@ -17,7 +17,7 @@ int main()
     {
         if (arr[i] >= 'a' && arr[i] <= 'z')
         {
-            arr[i] = arr[i] + 26;
+            arr[i] = arr[i] - 32;
         }
     }
 
