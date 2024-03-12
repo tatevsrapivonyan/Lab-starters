@@ -1,20 +1,39 @@
+//Իրականացնել int տիպի արժեք վերադարձնող ֆունկցիա, որը վերադարձնում է՝ 1, 
+//եթե ֆունկցային փոխանցված ամբողջ թիվը կարող է արտահայտվել երկու պարզ թվերի գումարով,
+//հակառակ դեպքում ֆունկցիան կվերադարձնի՝ 0:
+
 #include <iostream>
 
-int main() {
-    int array1[] = {1, 2, 3, 4};
-    int array2[] = {5, 6, 7};
-
-    int size1 = sizeof(array1) / sizeof(array1[0]);
-    int size2 = sizeof(array2) / sizeof(array2[0]);
-
-    int maxSize = (size1 > size2) ? size1 : size2;
-
-    for (int i = 0; i < maxSize; ++i) {
-        if (i < size1)
-            std::cout << "Array 1 element " << i << ": " << array1[i] << std::endl;
-        if (i < size2)
-            std::cout << "Array 2 element " << i << ": " << array2[i] << std::endl;
+bool is_prime(int num)
+{
+    if (num <= 1)
+    {
+        return false;
     }
 
+    if (num == 2 || num == 3)
+    {
+        return true;
+    }
+
+    for (int i = 3; i * i <= num; ++i)
+    {
+        if (num % i == 0)
+        {
+            return false;
+        }
+    }
+    return true;
+}
+
+int is_primes_sum(int num)
+{
+    for (int i = 0; i <= num / 2; ++i)
+    {
+        if (is_prime(i) && is_prime(num -i))
+        {
+            return 1;
+        }
+    }
     return 0;
 }
