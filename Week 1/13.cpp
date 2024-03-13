@@ -25,9 +25,3 @@ void to_binary(int num)
 
     std::cout << result << std::endl;
 }
-
-int main()
-{
-    int num = 12;
-    to_binary(num);
-}
