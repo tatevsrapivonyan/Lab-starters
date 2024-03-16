@@ -11,6 +11,4 @@ void reverse(char arr[], size_t size)
         arr[i] = arr[size - 1 - i];
         arr[size - 1 - i] = tmp;
     }
-
-    std::cout << arr << std::endl;
 }
