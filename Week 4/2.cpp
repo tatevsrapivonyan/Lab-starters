@@ -22,8 +22,3 @@ int least_common_multiple(int num1, int num2)
 {
     return (num1 * num2) / gcd(num1, num2);
 }
-
-int main()
-{
-    std::cout << least_common_multiple(10, 15);
-}
