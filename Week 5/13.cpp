@@ -1,7 +1,5 @@
 // Write a program to count the number of set bits in an integer (population count).
 
-#include <iostream>
-
 int bits_count(int num)
 {
     int mask = 1;
