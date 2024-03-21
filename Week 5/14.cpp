@@ -1,7 +1,5 @@
 // Write a program to count the number of leading zeros in an integer.
 
-#include <iostream>
-
 int leading_zeros(unsigned int num)
 {
     int mask = 1;
