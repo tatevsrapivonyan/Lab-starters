@@ -6,5 +6,5 @@ bool is_set(int num, int position)
     
     int check = num & mask;
 
-    return check != 0;
+    return check && 1;
 }
