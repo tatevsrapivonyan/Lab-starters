@@ -12,8 +12,10 @@ int main()
 
     if (file.is_open())
     {
-        file >> data;
-        std::cout << data << std::endl;
+        while (file >> data)
+        {
+            std::cout << data << " ";
+        }
         file.close();
     }
     else
