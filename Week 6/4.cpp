@@ -14,7 +14,7 @@ int main()
     copyable.open("./files/first.txt");
     file.open("./files/second.txt", std::ios::app);
 
-    if (copyable && file)
+    if (copyable.is_open() && file.is_open())
     {
         while (std::getline(copyable, text_to_copy))
         {
