@@ -3,7 +3,6 @@
 #include <iostream>
 #include <fstream>
 #include <string>
-#include <vector>
 
 void search_word(const std::string& file_name, const std::string word)
 {
@@ -15,7 +14,7 @@ void search_word(const std::string& file_name, const std::string word)
         std::string data;
         while (file >> data)
         {
-            if (data == file_name)
+            if (data == word)
             {
                 std::cout << data << " ";
             }
@@ -26,11 +25,4 @@ void search_word(const std::string& file_name, const std::string word)
     {
         std::cout << "Error!" << std::endl;
     }
-}
-
-int main()
-{
-    search_word("./files/first.txt", "New");
-
-    return 0;
 }
